@@ -83,34 +83,35 @@ startBtn.onclick = () => {
 
 // -------------------- CODE VERIFICATION --------------------
 Object.keys(codes).forEach(lvl => {
-  inputs[lvl].addEventListener("input", (e) => {
-    let value = e.target.value;
+  inputs[lvl].addEventListener("keydown", (e) => {
+    // Check if the user pressed the Enter key
+    if (e.key === "Enter") {
+      let value = e.target.value.trim().toUpperCase(); // Allow letters and make case-insensitive
 
-    // Numbers only
-    value = value.replace(/[^0-9]/g, "");
-    e.target.value = value;
-
-    if (value.length !== 4) return;
-
-    if (value === codes[lvl]) {
-      // Turn circle green on success
-      circles[lvl].classList.remove("red");
-      circles[lvl].classList.add("green");
-
-      solved[lvl] = true;
-      inputs[lvl].disabled = true;
-
-      if (successSound) successSound.play();
-      checkWin();
-    } else {
-      // Show red briefly if wrong, but no lives lost
-      circles[lvl].classList.add("red");
-      setTimeout(() => {
+      if (value === codes[lvl].toUpperCase()) {
+        // SUCCESS
         circles[lvl].classList.remove("red");
-        e.target.value = "";
-      }, 500);
+        circles[lvl].classList.add("green");
+        solved[lvl] = true;
+        inputs[lvl].disabled = true;
+
+        if (successSound) successSound.play();
+        checkWin();
+      } else {
+        // ERROR - Triggered only on Enter
+        circles[lvl].classList.add("red");
+        if (errorSound) errorSound.play();
+        
+        // Optional: Remove red after 1 second so they can try again
+        setTimeout(() => {
+          circles[lvl].classList.remove("red");
+        }, 1000);
+      }
     }
   });
+
+  // Remove the old 'input' listener that was blocking letters
+  inputs[lvl].oninput = null; 
 });
 
 // -------------------- FINAL REBOOT --------------------
