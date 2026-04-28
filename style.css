@@ -35,25 +35,21 @@ body {
   z-index: 0;
 }
 
-/* ПОДСТАВЬ СВОИ КАРТИНКИ */
+/* UPDATED IMAGES */
 .start-bg {
-  background: url("images/start.jpg") center/cover no-repeat;
+  background: url("assets/intro.png") center/cover no-repeat;
 }
 
 .inside-bg {
-  background: url("images/inside.jpg") center/cover no-repeat;
+  background: url("assets/intro.png") center/cover no-repeat;
 }
 
 .computer-bg {
-  background: url("images/computer.jpg") center/cover no-repeat;
-}
-
-.gameover-bg {
-  background: url("images/explosion.jpg") center/cover no-repeat;
+  background: url("assets/intro.png") center/cover no-repeat;
 }
 
 .win-bg {
-  background: url("images/launch.jpg") center/cover no-repeat;
+  background: url("assets/restored.png") center/cover no-repeat;
 }
 
 /* DARK OVERLAY */
