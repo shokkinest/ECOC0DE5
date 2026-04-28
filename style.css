@@ -37,19 +37,19 @@ body {
 
 /* UPDATED IMAGES */
 .start-bg {
-  background: url("assets/intro.png") center/cover no-repeat;
+  background: url("images/intro.png") center/cover no-repeat;
 }
 
 .inside-bg {
-  background: url("assets/intro.png") center/cover no-repeat;
+  background: url("images/intro.png") center/cover no-repeat;
 }
 
 .computer-bg {
-  background: url("assets/intro.png") center/cover no-repeat;
+  background: url("images/intro.png") center/cover no-repeat;
 }
 
 .win-bg {
-  background: url("assets/restored.png") center/cover no-repeat;
+  background: url("images/restored.png") center/cover no-repeat;
 }
 
 /* DARK OVERLAY */
