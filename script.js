@@ -19,11 +19,11 @@ const winSound = document.getElementById("winSound");
 // -------------------- REBOOT CODES --------------------
 // You can change these 4-digit codes to whatever you prefer
 const codes = {
-  lvl1: "1368",
-  lvl2: "4621",
-  lvl3: "2600",
-  lvl4: "2312",
-  lvl5: "5555" // New 5th level code
+  lvl1: "CANOPY",
+  lvl2: "FLOW",
+  lvl3: "20130",
+  lvl4: "2050",
+  lvl5: "458" // New 5th level code
 };
 
 // -------------------- STATUS CIRCLES --------------------
